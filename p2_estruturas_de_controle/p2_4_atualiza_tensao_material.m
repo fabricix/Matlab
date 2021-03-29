@@ -20,7 +20,7 @@ switch material
         
     case "viscoso"
 
-        stress = material_viscous(strain);
+        stress = material_viscoso(strain);
     
     otherwise
         
@@ -50,7 +50,7 @@ function stress = material_nao_linear(strain)
     stress=E*strain.^0.2;
 end
 
-function stress = material_viscous(strain)
+function stress = material_viscoso(strain)
     %
     % função que retorna a curva tensão-deformação de um material 
     % hipotético de comportamento viscoso

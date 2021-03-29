@@ -13,13 +13,17 @@ niter_max=150;
 niter = 1;
 
 % loop principal da simulação
-while ( niter<niter_max && erro_solucao>erro_adm)
+while ( niter<niter_max )
 
     % obtém o erro da solução (tolerância)
     erro_solucao = update_approximation();
     
     % incrementa a iteração em 1
     niter = niter + 1;
+    
+    if erro_solucao<erro_adm
+        break;
+    end
 end
 
 % imprime o número de interação e o erro

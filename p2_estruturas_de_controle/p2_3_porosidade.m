@@ -18,6 +18,7 @@ devol=linspace(0,0.25,nincre);
 % vetor de porosidade
 p = zeros(nincre,1);
 
+% atualiza a porosidade
 for i=1:nincre
 
 	p(i) = atualiza_porosidade(po,devol(i));
